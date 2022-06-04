@@ -18,6 +18,7 @@ $accent: #518c8c;
   max-width: 1100px;
   margin: auto;
   margin-top: 2rem;
+  padding: 2%;
 
   .center-text {
     text-align: center;
