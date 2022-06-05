@@ -1,18 +1,23 @@
 <template>
   <NavBar />
-  <router-view />
+  <div class="ui segment main-segment"><router-view /></div>
 </template>
 <script>
-// eslint-disable-next-line prettier/prettier
+import { onMounted } from '@vue/runtime-core';
 import NavBar from './components/NavBar.vue';
 export default {
   components: { NavBar },
+  setup() {
+    onMounted(() => {
+      document.title = 'My Blue Matrix';
+    });
+  },
 };
 </script>
 
 <style lang="scss">
-$primary: #0f3a4b;
-$accent: #518c8c;
+$primary: #0000a8;
+$accent: #00a0a8;
 
 #app {
   max-width: 1100px;
@@ -36,8 +41,14 @@ $accent: #518c8c;
     color: white;
   }
   .menu .active.item {
-    color: $accent;
-    border-color: $accent;
+    background-color: $primary;
+    border-color: $primary;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+  }
+  .main-segment {
+    min-height: 70vh;
   }
 }
 </style>
