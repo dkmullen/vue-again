@@ -45,6 +45,7 @@ export default {
       { label: 'Messages', navClass: '' },
       { label: 'Favorites', navClass: '' },
     ]);
+
     let showMobileMenu = ref(false);
     function go(location) {
       menuItems.value.forEach((item) => {
@@ -56,6 +57,7 @@ export default {
     function toggleMobileMenu() {
       showMobileMenu.value = !showMobileMenu.value;
     }
+
     return {
       go,
       menuItems,

@@ -7,6 +7,7 @@
 </template>
 <script>
 import { onMounted } from '@vue/runtime-core';
+
 import NavBar from './components/NavBar.vue';
 export default {
   components: { NavBar },
@@ -70,6 +71,10 @@ body {
   }
   .align-left {
     text-align: left;
+  }
+  .spinner {
+    color: $accent;
+    opacity: 1;
   }
 }
 </style>
