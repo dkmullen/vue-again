@@ -9,14 +9,20 @@
       <i class="search icon" v-if="!loading"></i>
       <i class="spinner notched circle loading icon" v-if="loading"></i>
     </div>
+    <form class="ui form">
+      <BaseInput icon="coffee icon" label="Name" id="name" />
+      <BaseInput icon="coffee icon" label="Email" id="email" type="email" />
+    </form>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue';
 import * as auth from '../services/authService';
+import BaseInput from '../components/baseComponents/BaseInput.vue';
 
 export default {
+  components: { BaseInput },
   setup() {
     let loading = ref(false);
     let token = ref(

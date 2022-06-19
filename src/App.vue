@@ -77,4 +77,7 @@ body {
     opacity: 1;
   }
 }
+form {
+  text-align: left;
+}
 </style>
